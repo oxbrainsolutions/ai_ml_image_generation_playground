@@ -7,7 +7,7 @@ from utils.functions import generate_images, display_images, export_images, gene
 
 openai.api_key = "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"
 
-st.set_page_config(page_title="Image Generation Playground", page_icon="images/oxbrain_favicon.png", layout="wide")
+st.set_page_config(page_title="Image Generation Playground", page_icon="images/playground_favicon.png", layout="wide")
 
 st.elements.utils._shown_default_value_warning=True
 
@@ -172,7 +172,7 @@ marker_spinner_css = """
     
     @keyframes animateBlink {
     0% {
-        background: #FCBC24;
+        background: #03A9F4;
     }
     75% {
         background: rgba(0, 0, 0, 0);
@@ -506,10 +506,10 @@ st.markdown("""
         max-width: 3em !important;
     }
     .css-gesnqs {
-        background-color: #FCBC24 !important;
+        background-color: #03A9F4 !important;
     }
     .css-fpzaie {
-        background-color: #FCBC24 !important;
+        background-color: #03A9F4 !important;
     }
     .css-5qhjmn {
         z-index: 1000 !important;
@@ -656,7 +656,7 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
-line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
+line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #03A9F4; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query1 = '''
     <style>
     @media (max-width: 1024px) {
@@ -809,11 +809,11 @@ header = """
 """
 
 # Replace `image_file_path` with the actual path to your image file
-image_file_path = "images/oxbrain_header_background.jpg"
+image_file_path = "images/playground_background.jpg"
 with open(image_file_path, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
-st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_trans.png")),
+st.markdown(header.format(encoded_string, img_to_bytes("images/playground_logo.png")),
             unsafe_allow_html=True)
 
 spinner = st.empty()
