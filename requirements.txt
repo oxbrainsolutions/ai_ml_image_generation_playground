@@ -1,0 +1,8 @@
+streamlit
+streamlit-modal
+openai
+pillow
+opencv-python-headless
+imutils
+numpy
+chardet
