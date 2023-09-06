@@ -914,8 +914,9 @@ with col2:
   '''
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
-
-st.write("user_image_description" in st.session_state)
+    
+  st.write("user_image_description" in st.session_state)
+  st.write("user_generated_images" in st.session_state)
 iteration_limit = 10
 
 with st.sidebar:
