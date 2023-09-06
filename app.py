@@ -914,16 +914,14 @@ with col2:
   '''
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
-    
-  st.write("user_image_description" in st.session_state)
-  st.write("user_generated_images" in st.session_state)
+  st.write(st.session_state.user_image_description == "")  
 iteration_limit = 10
 
 with st.sidebar:
     with dataset_container:
         error_field2 = st.empty()
         if submit_button1:
-            if "user_image_description" not in st.session_state or st.session_state.user_n_variations == "":
+            if st.session_state.user_image_description == "" not in st.session_state or st.session_state.user_n_variations == "":
                 st.session_state.submit_confirm1 = False
                 st.session_state.generate_confirm1 = False
                 error_field2.error("Error: Please complete input details.")
