@@ -803,10 +803,11 @@ header = """
     </style>
     <div class="header">
         <div class="middle-column">
-            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="8%">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="6%">
         </div>
     </div>
 """
+
 
 # Replace `image_file_path` with the actual path to your image file
 image_file_path = "images/playground_background.png"
@@ -895,7 +896,7 @@ with st.sidebar:
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
   header_text = '''
-    <p class="header_text" style="margin-top: 3.6em; margin-bottom: 0em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Image Synthesis & Generation</span></p>
+    <p class="header_text" style="margin-top: 4em; margin-bottom: 0em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Image Synthesis & Generation</span></p>
   '''
 
   header_media_query = '''
