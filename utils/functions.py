@@ -23,7 +23,7 @@ def export_images(arrays):
   zip_file = io.BytesIO()
   with zipfile.ZipFile(zip_file, mode='w') as zf:
     for i, array in enumerate(arrays):
-      new_filename = "oxbrAIn_Generated_Image_{}.png".format(i+1)
+      new_filename = "Generated_Image_{}.png".format(i+1)
       zf.writestr(new_filename, array)
   zip_file.seek(0)
   b64 = base64.b64encode(zip_file.getvalue()).decode()
@@ -57,7 +57,7 @@ def export_images(arrays):
             </style>
             """, unsafe_allow_html=True)
  
-  filename_out = "oxbrAIn_Image_Generation_Playground"
+  filename_out = "Image_Generation_Playground"
   st.download_button(
       label="Download Images",
       data=zip_file.getvalue(),
